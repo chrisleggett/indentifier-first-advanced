@@ -1,7 +1,8 @@
+
 version: "3.1"
 # The server profiles used in this example are intended for use with edge versions of the product image only.
 
-
+services:  
   pingfederate:
     image: pingidentity/pingfederate:9.3.3-alpine-edge
     command: wait-for pingdirectory:389 -t 300 -- entrypoint.sh start-server
@@ -46,7 +47,6 @@ version: "3.1"
     networks: 
       - pingnet-internal
               
-  
 networks:
-    pingnet-internal:
-    pingnet-dmz:
+  pingnet-internal:
+  pingnet-dmz:
